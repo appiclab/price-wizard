@@ -34,6 +34,7 @@ import StackItem from "./StackItem";
 import Tabs from "./Tabs";
 import Tag from "./Tag";
 import TextField from "./TextField";
+import TextStyle from "./TextStyle";
 import Modal from "./Modal";
 
 export default {
@@ -73,5 +74,6 @@ export default {
   Tabs,
   Tag,
   TextField,
+  TextStyle,
   Modal,
 };
