@@ -6,6 +6,7 @@ import Banner from "./Banner";
 import Breadcrumbs from "./Breadcrumbs";
 import Button from "./Button";
 import ButtonGroup from "./ButtonGroup";
+import ButtonGroupItem from "./ButtonGroupItem";
 import Card from "./Card";
 import CardSection from "./CardSection";
 import Checkbox from "./Checkbox";
@@ -44,6 +45,7 @@ export default {
   Breadcrumbs,
   Button,
   ButtonGroup,
+  ButtonGroupItem,
   Card,
   CardSection,
   Checkbox,
@@ -71,5 +73,5 @@ export default {
   Tabs,
   Tag,
   TextField,
-  Modal
+  Modal,
 };
