@@ -5,7 +5,7 @@
         title="Price Rules"
         :subdued="false"
         sectioned
-        class="card-title"
+        class="card-content"
       >
         <ul class="price-rules-list">
           <li class="price-rules-item">
@@ -21,6 +21,21 @@
           </li>
           <li class="price-rules-item">2</li>
         </ul>
+        <div class="price-rules-config">
+          <polaris-text-field
+            placeholder="New Price Rule"
+            value=""
+            label="Rule name"
+            class="polaris-text-field"
+          />
+          <polaris-layout>
+            <polaris-layout-annotated-section
+              title="If"
+            >
+            asdas
+            </polaris-layout-annotated-section>
+          </polaris-layout>
+        </div>
       </polaris-card>
     </polaris-layout-section>
     <polaris-layout-section class="control-buttons">
@@ -57,7 +72,7 @@ export default {
 .card {
   width: 100%;
 }
-.card-title {
+.card-content {
   & .Polaris-Heading {
     font-weight: 600;
     font-size: 24px;
@@ -71,6 +86,8 @@ export default {
   }
 
   & .Polaris-Card__Section {
+    display: flex;
+    justify-content: space-between;
     padding: 0;
   }
 }
@@ -98,5 +115,14 @@ export default {
   border: 1px solid #dfe3e8;
   border-top: 0;
   border-left: 0;
+}
+
+.price-rules-config {
+  padding: 20px;
+  width: 100%;
+
+  & .polaris-text-field {
+    width: 70%;
+  }
 }
 </style>

@@ -15,6 +15,7 @@ import ChoiceList from "./ChoiceList";
 import FormLayout from "./FormLayout";
 import FormLayoutGroup from "./FormLayoutGroup";
 import FormLayoutItem from "./FormLayoutItem";
+import Heading from "./Heading";
 import Icon from "./Icon";
 import Label from "./Label";
 import Labelled from "./Labelled";
@@ -35,6 +36,7 @@ import Tabs from "./Tabs";
 import Tag from "./Tag";
 import TextField from "./TextField";
 import TextStyle from "./TextStyle";
+import TextContainer from "./TextContainer";
 import Modal from "./Modal";
 
 export default {
@@ -55,6 +57,7 @@ export default {
   FormLayout,
   FormLayoutGroup,
   FormLayoutItem,
+  Heading,
   Icon,
   Label,
   Labelled,
@@ -75,5 +78,6 @@ export default {
   Tag,
   TextField,
   TextStyle,
+  TextContainer,
   Modal,
 };
