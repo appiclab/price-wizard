@@ -1,5 +1,5 @@
 {
-  "name": "shopify-seo-tool",
+  "name": "price-wizard",
   "description": "",
   "version": "1.0.0",
   "license": "ISC",
@@ -10,8 +10,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "webpack-dev-server --mode=development --hot",
-    "build": "rm -rf public && webpack --mode=production",
-    "build:polaris": "rm -rf lib && webpack --mode=production --config=polaris-vue/webpack.config.js",
+    "build": "del /s public && webpack --mode=production",
+    "build:polaris": "del /s lib && webpack --mode=production --config=polaris-vue/webpack.config.js",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },

@@ -1,40 +1,31 @@
 <template>
   <polaris-layout>
     <polaris-layout-section>
-      <polaris-card
-        title="Price Rules"
-        :subdued="false"
-        sectioned
-        class="card-content"
-      >
-        <ul class="price-rules-list">
-          <li class="price-rules-item">
-            <polaris-text-style variation="subdued">
-              New Price Rule
-            </polaris-text-style>
-            <polaris-checkbox
-              label=""
-              :labelHidden="false"
-              :checked="false"
-              :error="false"
-            />
-          </li>
-          <li class="price-rules-item">2</li>
-        </ul>
-        <div class="price-rules-config">
-          <polaris-text-field
-            placeholder="New Price Rule"
-            value=""
-            label="Rule name"
-            class="polaris-text-field"
-          />
-          <polaris-layout>
-            <polaris-layout-annotated-section
-              title="If"
-            >
-            asdas
-            </polaris-layout-annotated-section>
+      <polaris-card title="Price Rules" :subdued="false" sectioned class="card">
+        <div class="card-content">
+          <polaris-layout secondary="" class="card-content__rules">
+            <ul class="card-content__rules-list">
+              <li>
+                New Price Rule
+                <polaris-checkbox
+                  label=""
+                  :labelHidden="false"
+                  :checked="false"
+                  :error="false"
+                />
+              </li>
+              <li>
+                New Price Rule
+                <polaris-checkbox
+                  label=""
+                  :labelHidden="false"
+                  :checked="false"
+                  :error="false"
+                />
+              </li>
+            </ul>
           </polaris-layout>
+          <polaris-layout class="card-content__config"> sda </polaris-layout>
         </div>
       </polaris-card>
     </polaris-layout-section>
@@ -70,26 +61,44 @@ export default {
 
 <style lang="scss">
 .card {
-  width: 100%;
-}
-.card-content {
-  & .Polaris-Heading {
-    font-weight: 600;
-    font-size: 24px;
-    line-height: 28px;
-    color: #212b36;
-  }
-
   & .Polaris-Card__Header {
-    padding: 2rem 34px;
-    border-bottom: 1px solid #dfe3e8;
+    padding: 20px 34px;
   }
 
   & .Polaris-Card__Section {
+    border-top: 1px solid #dfe3e8;
+  }
+}
+
+.card-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-content__rules {
+  width: 225px;
+}
+
+.card-content__rules-list {
+  list-style: none;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+  & li {
     display: flex;
     justify-content: space-between;
-    padding: 0;
+    align-items: center;
+    padding: 16px 10px 16px 34px;
+    border: 1px solid #dfe3e8;
+    border-top: 0;
+    border-left: 0;
   }
+}
+
+.card-content__config {
+  flex: 1;
+  margin-left: 20px !important;
 }
 
 .control-buttons {
@@ -97,32 +106,6 @@ export default {
 
   & .Polaris-PageActions {
     border: 0;
-  }
-}
-
-.price-rules-list {
-  width: 224px;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-
-.price-rules-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 11px 10px 11px 34px;
-  border: 1px solid #dfe3e8;
-  border-top: 0;
-  border-left: 0;
-}
-
-.price-rules-config {
-  padding: 20px;
-  width: 100%;
-
-  & .polaris-text-field {
-    width: 70%;
   }
 }
 </style>

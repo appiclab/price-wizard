@@ -32,7 +32,7 @@ module.exports = (env, argv) => {
               options: {
                 data: {
                   shop: {
-                    app_name: "SEO Tool",
+                    app_name: "Price wizard",
                     primary_locale: "en",
                     domain: "vm-store-dev.myshopify.com",
                     access_token: "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",
