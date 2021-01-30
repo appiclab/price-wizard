@@ -25,7 +25,84 @@
               </li>
             </ul>
           </polaris-layout>
-          <polaris-layout class="card-content__config"> sda </polaris-layout>
+          <polaris-layout class="card-content__config">
+            <polaris-text-field
+              placeholder="New Price Rule"
+              value=""
+              label="Rule name"
+              class="rule-name"
+            />
+            <polaris-layout>
+              <polaris-layout-annotated-section
+                title="If"
+                class="card-content__config-if"
+              >
+                <div class="card-content__config-selects">
+                  <polaris-select
+                    :options="[
+                      { label: 'one', value: 'one' },
+                      { label: 'tow', value: 'tow' },
+                    ]"
+                    placeholder="Select..."
+                    class="select-control"
+                  />
+                  <polaris-select
+                    :options="[
+                      { label: 'one', value: 'one' },
+                      { label: 'tow', value: 'tow' },
+                    ]"
+                    placeholder="Is equal to..."
+                    class="select-control"
+                  />
+                </div>
+                <div class="card-content__config-inputs">
+                  <polaris-text-field placeholder="Type the value" />
+                  <div class="card-content__config-checkboxes">
+                    <polaris-checkbox
+                      label="And"
+                      :labelHidden="false"
+                      :checked="false"
+                      :error="false"
+                    />
+                    <polaris-checkbox
+                      label="Or"
+                      :labelHidden="false"
+                      :checked="false"
+                      :error="false"
+                    />
+                  </div>
+                </div>
+              </polaris-layout-annotated-section>
+            </polaris-layout>
+            <polaris-layout>
+              <polaris-layout-annotated-section
+                title="Then select"
+                class="card-content__config-then-select"
+              >
+                <div class="card-content__config-selects">
+                  <polaris-select
+                    :options="[
+                      { label: 'one', value: 'one' },
+                      { label: 'tow', value: 'tow' },
+                    ]"
+                    placeholder="Select..."
+                    class="select-control"
+                  />
+                  <polaris-select
+                    :options="[
+                      { label: 'one', value: 'one' },
+                      { label: 'tow', value: 'tow' },
+                    ]"
+                    placeholder="And set to value..."
+                    class="select-control"
+                  />
+                </div>
+                <div class="card-content__config-inputs">
+                  <polaris-text-field placeholder="Type the value" />
+                </div>
+              </polaris-layout-annotated-section>
+            </polaris-layout>
+          </polaris-layout>
         </div>
       </polaris-card>
     </polaris-layout-section>
@@ -98,7 +175,18 @@ export default {
 
 .card-content__config {
   flex: 1;
+  flex-direction: column;
   margin-left: 20px !important;
+  padding-top: 20px;
+
+  & .Polaris-Connected {
+    min-width: 306px;
+  }
+
+  & .Polaris-Layout {
+    flex-direction: column;
+    width: 100%;
+  }
 }
 
 .control-buttons {
@@ -106,6 +194,49 @@ export default {
 
   & .Polaris-PageActions {
     border: 0;
+  }
+}
+
+.rule-name {
+  margin-bottom: 15px;
+}
+
+.select-control {
+  min-width: 208px;
+}
+
+.card-content__config-if, .card-content__config-then-select {
+  min-width: 540px !important;
+  max-width: 100% !important;
+  
+  & .Polaris-Layout__AnnotationContent {
+    margin-top: 0;
+  }
+}
+
+.card-content__config-selects {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+.card-content__config-inputs {
+  display: flex;
+  align-items: center;
+}
+
+.card-content__config-checkboxes {
+  margin-left: 27px;
+  flex: 1;
+  display: flex;
+  align-items: center;
+
+  & div {
+    padding-right: 18px;
+
+    &:last-child {
+      padding: 0;
+    }
   }
 }
 </style>
