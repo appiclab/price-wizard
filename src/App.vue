@@ -24,6 +24,53 @@
                 />
               </li>
             </ul>
+            <ul class="card-content__rules-control">
+              <li>
+                <button class="card-content__rules-button">
+                  <polaris-icon
+                    color="Teal"
+                    accessibilityLabel="Accessibility label"
+                    source="add"
+                  />
+                </button>
+              </li>
+              <li>
+                <button class="card-content__rules-button">
+                  <polaris-icon
+                    color="Teal"
+                    accessibilityLabel="Accessibility label"
+                    source="duplicate"
+                  />
+                </button>
+              </li>
+              <li>
+                <button class="card-content__rules-button">
+                  <polaris-icon
+                    color="Teal"
+                    accessibilityLabel="Accessibility label"
+                    source="chevronRight"
+                  />
+                </button>
+              </li>
+              <li>
+                <button class="card-content__rules-button">
+                  <polaris-icon
+                    color="Teal"
+                    accessibilityLabel="Accessibility label"
+                    source="circleCancel"
+                  />
+                </button>
+              </li>
+              <li>
+                <button class="card-content__rules-button">
+                  <polaris-icon
+                    color="Teal"
+                    accessibilityLabel="Accessibility label"
+                    source="delete"
+                  />
+                </button>
+              </li>
+            </ul>
           </polaris-layout>
           <polaris-layout class="card-content__config">
             <polaris-text-field
@@ -154,6 +201,7 @@ export default {
 
 .card-content__rules {
   width: 225px;
+  flex-direction: column;
 }
 
 .card-content__rules-list {
@@ -171,6 +219,28 @@ export default {
     border-top: 0;
     border-left: 0;
   }
+}
+
+.card-content__rules-control {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  width: 100%;
+  padding: 16px 10px 16px 34px;
+  border: 1px solid #dfe3e8;
+  border-top: 0;
+  border-left: 0;
+}
+
+.card-content__rules-button {
+  background: transparent;
+  width: 20px;
+  height: 20px;
+  outline: none;
+  border: 0;
+  padding: 0;
 }
 
 .card-content__config {
@@ -205,10 +275,11 @@ export default {
   min-width: 208px;
 }
 
-.card-content__config-if, .card-content__config-then-select {
+.card-content__config-if,
+.card-content__config-then-select {
   min-width: 540px !important;
   max-width: 100% !important;
-  
+
   & .Polaris-Layout__AnnotationContent {
     margin-top: 0;
   }
